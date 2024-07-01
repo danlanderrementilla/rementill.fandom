@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.6;
+  background: #f3eeee;
+  padding-top: 60px; 
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px ;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  background: #020202;
+}
+
+nav .logo {
+  height: 50px;
+  
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  position: relative;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  height: 2px;
+  width: 0;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a.active {
+  font-weight: bold;
+  color: rgb(252, 248, 248);
+}
+
+
+.card {
+  height: px;
+  margin: 20px auto;
+  padding: 10px;
+  max-width: 900px;
+  background-color: #961919;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.card__content {
+  padding: 20px;
+  background-color: #961919;
+  color: #f8f7f7;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.card__title {
+  font-family: 'Impact', sans-serif;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.card__description {
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+      background-color: #7c0f18;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      display: none;
+  }
+
+  nav ul.active {
+      display: flex;
+  }
+
+  nav .logo {
+      height: 40px;
+  }
+
+  nav ul li {
+      margin: 10px 0;
+  }
+
+  nav ul li a {
+      font-size: 14px;
+  }
+
+  .card {
+      padding: 15px;
+  }
+
+  .card__title {
+      font-size: 28px;
+  }
+
+  .card__description {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul li a {
+      font-size: 12px;
+  }
+
+  .card__title {
+      font-size: 24px;
+  }
+
+  .card__description {
+      font-size: 12px;
+  }
+}
+
+.end{
+  text-align: center;
+}

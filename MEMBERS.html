@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="MEMBERS.css">
+    <title>Maroon 5</title>
+</head>
+<body>
+   
+    <nav>
+        <img src="m5logo.jfif" class="logo">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="ABOUT.html">ABOUT</a></li>
+            <li><a href="MEMBERS.html">MEMBERS</a></li>
+            <li><a href="ALBUM.html">SONGS</a></li>
+        </ul>
+    </nav>
+  
+    <div class="gallery">
+        <figure class="card"> <span>ADAM</span>
+            <img src="ALvocalist.jpg" alt="img1">
+        </figure>
+        <figure class="card"> <span>JAMES </span>
+            <img src="JVleadguitarist.jpg" alt="img2">
+        </figure>
+        <figure class="card"> <span>JESSE</span>
+            <img src="JCkeyboard.jpg" alt="img3">
+        </figure>
+        <figure class="card"> <span>MATT</span>
+            <img src="MFdrummer.jpg" alt="img4">
+        </figure>
+        <figure class="card"> <span>MICKEY</span>
+            <img src="MMbassguitar.jpg" alt="img5">
+        </figure>
+        <figure class="card"> <span>PRINCE</span>
+            <img src="PM.jpg" alt="img6">
+        </figure>
+        <figure class="card"> <span>SAM</span>
+            <img src="SMbassguitar.jpg" alt="img8">
+        </figure>
+    </div>
+    <script>
+   document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+        card.addEventListener('click', function() {
+            // Toggle 'expanded' class on clicked card
+            card.classList.toggle('expanded');
+
+            cards.forEach(otherCard => {
+                if (otherCard !== card) {
+                    otherCard.classList.remove('expanded');
+                }
+            });
+        });
+    });
+});
+
+    </script>
+</body>
+</html>
